@@ -4,13 +4,11 @@ const _ = require('lodash');
 console.log(chalk.cyan('\nEXERCISE 2 LOADED\n'));
 
 const reverseYolo = input => {
-  var reverse = _.chain(input)
+  return _.chain(input)
     .values()
     .map(serie => _.orderBy(serie).reverse())
     .flatten()
     .value();
-
-    console.log(reverse);
 }
 
 module.exports = {
