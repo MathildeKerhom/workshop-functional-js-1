@@ -12,9 +12,15 @@ var promiseStrings = new Promise(function (fulfill, reject) {
 })
 
 const asyncYolo = (input) => {
+  promiseNumbers.then(zip);
+}
 
-  // Your future job begins here ...
+var getNumbers = (strings) => {
+  return strings.map(str => parseInt(str));
+}
 
+var zip = (numbers) => {
+  return _.zip(numbers, promiseStrings.then(getNumbers));
 }
 
 module.exports = {
