@@ -16,7 +16,7 @@ describe('GIVEN function zip', function() {
   });
 
   it('WHEN 2 sub arrays with different length THEN should return max length sub arrays zipped', function() {
-    expect(zip(['a', 'b'], [1], [true, false, false])).to.eql([['a', 1, true], ['b', false], [false]]);
+    expect(zip([['a', 'b'], [1], [true, false, false]])).to.eql([['a', 1, true], ['b', false], [false]]);
   });
 
 });
